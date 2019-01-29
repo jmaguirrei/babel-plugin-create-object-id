@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-create-object-id",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Creates a sequential id inside objects with render method (components) for later use in CSS scoping",
   "main": "src/index.js",
   "scripts": {
