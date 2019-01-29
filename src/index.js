@@ -19,7 +19,8 @@ module.exports = function (/* babel */) {
 
   const visitor = {
 
-    ObjectExpression({ node }) {
+    ObjectExpression({ node }, { opts }) {
+      console.log("opts", opts);
       node.properties.forEach(property => {
         if (property.key && property.key.name === 'render') {
           node.properties.push(getNode(sequential++));

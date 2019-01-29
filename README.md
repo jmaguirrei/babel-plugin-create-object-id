@@ -35,10 +35,10 @@ Will be transpiled to:
 ```javascript
 export default () => {
   return {
-    id: 1000,
     render() {
       return 'Someting';
-    }
+    },
+    id: 1000
   }
 }
 ```
