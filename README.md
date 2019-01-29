@@ -2,53 +2,44 @@
 
 Creates a sequential id inside objects with render method (components) for later use in CSS scoping
 
-# usage
+## usage
 
 In `.babelrc` file include
 
 ```
 plugins: [
-
   [
     "create-object-id"
-  ],
-
+  ]
 ]
 ```
 
-# input
+## input
 
 Any object containing a render method, like:
 
 ```javascript
 export default () => {
-
   return {
-
     render() {
       return 'Someting'
     };
-
   }
-
 }
 ```
+
+## output
 
 Will be transpiled to:
 
 ```javascript
 export default () => {
-
   return {
-
     id: 1000,
-
     render() {
       return 'Someting'
     };
-
   }
-
 }
 ```
 
@@ -70,5 +61,6 @@ render() {
 ```
 Or (a better option) to generate this automatically witha Higher Order Function for each component.
 
+**This is not an official plugin, just experimental, use it under your own risk.**
 
 
