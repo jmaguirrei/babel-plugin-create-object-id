@@ -2,9 +2,9 @@
   "name": "babel-plugin-create-object-id",
   "version": "0.0.2",
   "description": "Creates a sequential id inside objects with render method (components) for later use in CSS scoping",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "npm version patch && parcel build ./src/index.js",
+    "build": "npm version patch",
     "git-i1": "git add .",
     "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
     "git-i3": "git push",
