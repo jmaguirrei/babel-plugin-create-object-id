@@ -1,6 +1,6 @@
 # babel-plugin-create-object-id
 
-Creates a sequential id inside objects with render method (components) for later use in CSS scoping
+Creates a sequential id inside objects (only the ones with a render method -aka components-) for later use in (for example) scoping CSS classes by prepending this id to classnames, for example (this is up to you) `wrapper => 1000--wrapper`.
 
 ## usage
 
