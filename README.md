@@ -61,6 +61,6 @@ render() {
 ```
 Or (a better option) to generate this automatically witha Higher Order Function for each component.
 
-**This is not an official plugin, just experimental, use it under your own risk.**
+**This is not an official plugin, just experimental, use it at your own risk.**
 
 
