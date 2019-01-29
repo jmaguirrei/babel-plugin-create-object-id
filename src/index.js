@@ -21,9 +21,8 @@ module.exports = function (/* babel */) {
 
     ObjectExpression({ node }) {
       node.properties.forEach(property => {
-        if (property.key.name === 'render') {
+        if (property.key && property.key.name === 'render') {
           node.properties = [ getNode(sequential++), property ];
-          console.log(node.properties);
         }
       });
     }
