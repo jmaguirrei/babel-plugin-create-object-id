@@ -22,8 +22,8 @@ Any object containing a render method, like:
 export default () => {
   return {
     render() {
-      return 'Someting'
-    };
+      return 'Someting';
+    }
   }
 }
 ```
@@ -37,8 +37,8 @@ export default () => {
   return {
     id: 1000,
     render() {
-      return 'Someting'
-    };
+      return 'Someting';
+    }
   }
 }
 ```
@@ -56,7 +56,7 @@ render() {
     <div className={`${this.id}--wrapper`}>
       Content
     </div>
-  )
+  );
 }
 ```
 Or (a better option) to generate this automatically with a Higher Order Function for each component.
