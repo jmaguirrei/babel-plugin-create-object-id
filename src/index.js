@@ -19,10 +19,10 @@ module.exports = function (/* babel */) {
 
   const visitor = {
 
-    ObjectExpression({ node }, { opts }) {
-      console.log("opts", opts);
+    ObjectExpression({ node }, { opts = {} }) {
       node.properties.forEach(property => {
-        if (property.key && property.key.name === 'render') {
+        const methodName = opts.methodName || 'render';
+        if (property.key && property.key.name === methodName) {
           node.properties.push(getNode(sequential++));
         }
       });
