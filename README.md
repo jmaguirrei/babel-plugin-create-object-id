@@ -14,6 +14,17 @@ plugins: [
 ]
 ```
 
+if you want to use a custom method name that the object must have (instead of render), use the `methodName` config option:
+
+```
+plugins: [
+  [
+    "create-object-id", { "methodName": "my custom name" }
+  ]
+]
+```
+
+
 ## input
 
 Any object containing a render method, like:
