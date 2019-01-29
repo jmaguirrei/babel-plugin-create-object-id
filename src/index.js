@@ -22,7 +22,7 @@ module.exports = function (/* babel */) {
     ObjectExpression({ node }) {
       node.properties.forEach(property => {
         if (property.key && property.key.name === 'render') {
-          node.properties = [ getNode(sequential++), property ];
+          node.properties.push(getNode(sequential++));
         }
       });
     }
