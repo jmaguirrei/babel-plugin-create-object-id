@@ -8,7 +8,6 @@ module.exports = function (babel) {
 
     ObjectExpression({ node }) {
 
-      console.log(node);
       node.properties.forEach(property => {
         if (property.key && property.key.name === 'render') {
           node.properties.push(
