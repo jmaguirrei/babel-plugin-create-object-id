@@ -1,29 +1,20 @@
 
-let sequential = 1000;
+module.exports = function (babel) {
 
-const getNode = id => ({
-
-  type: 'ObjectProperty',
-  key: {
-    type: 'Identifier',
-    name: 'id',
-  },
-  value: {
-    type: 'NumericLiteral',
-    value: id,
-  },
-});
-
-
-module.exports = function (/* babel */) {
+  let sequential = 1000;
+  const { ObjectProperty, Identifier, NumericLiteral } = babel.types;
 
   const visitor = {
 
-    ObjectExpression({ node }, { opts = {} }) {
+    ObjectExpression({ node }) {
+
+      console.log(node);
       node.properties.forEach(property => {
-        const methodName = opts.methodName || 'render';
-        if (property.key && property.key.name === methodName) {
-          node.properties.push(getNode(sequential++));
+        if (property.key && property.key.name === 'render') {
+          node.properties.push(
+            ObjectProperty(Identifier('id'), NumericLiteral(sequential))
+          );
+          sequential++;
         }
       });
     }
