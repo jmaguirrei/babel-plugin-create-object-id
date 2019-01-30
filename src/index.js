@@ -26,10 +26,11 @@ module.exports = function ({ types }) {
 
           path.node.properties.push(
             types.ObjectProperty(
-              types.Identifier('sequential'),
-              types.NumericLiteral(sequential++),
+              types.Identifier('seq'),
+              types.NumericLiteral(sequential),
             )
           );
+          sequential++;
         }
       });
     }
