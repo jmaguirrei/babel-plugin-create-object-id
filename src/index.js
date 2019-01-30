@@ -30,6 +30,7 @@ module.exports = function ({ types }) {
               types.NumericLiteral(sequential),
             )
           );
+          console.log("sequential", sequential);
           sequential++;
         }
       });
